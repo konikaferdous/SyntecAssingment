@@ -1,0 +1,7 @@
+C:\Users\konika\source\repos\AssignmentProject\AssignmentProject\obj\Debug\AssignmentProject.csprojAssemblyReference.cache
+C:\Users\konika\source\repos\AssignmentProject\AssignmentProject\obj\Debug\AssignmentProject.csproj.CoreCompileInputs.cache
+C:\Users\konika\source\repos\AssignmentProject\AssignmentProject\bin\Debug\AssignmentProject.exe.config
+C:\Users\konika\source\repos\AssignmentProject\AssignmentProject\bin\Debug\AssignmentProject.exe
+C:\Users\konika\source\repos\AssignmentProject\AssignmentProject\bin\Debug\AssignmentProject.pdb
+C:\Users\konika\source\repos\AssignmentProject\AssignmentProject\obj\Debug\AssignmentProject.exe
+C:\Users\konika\source\repos\AssignmentProject\AssignmentProject\obj\Debug\AssignmentProject.pdb
