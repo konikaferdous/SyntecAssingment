@@ -14,9 +14,10 @@ namespace AssignmentProject
 
         static void Main(string[] args)
         {
+
             //Hello World
             Console.WriteLine("Hello World!");
-            
+
             //Variables 
             int myInt = 5;
             double myDouble = 5.5;
@@ -34,7 +35,8 @@ namespace AssignmentProject
             string pattern = @"([a-zA-Z]+) (\d+)"; //july 24
             string input = "the independence day was celebrated on july 24";
             Match match = Regex.Match(input, pattern);
-            if (match.Success){
+            if (match.Success)
+            {
                 Console.WriteLine(match.Value);
             }
 
@@ -108,9 +110,56 @@ namespace AssignmentProject
 
             Console.Write("\n\nPlease Enter Name 2");
             string name2 = Console.ReadLine();
+            Console.WriteLine("\n\nThe name entered are {0} aand {1} ", name1, name2);
 
-            Console.WriteLine(" ");
+            Console.Write("\n\nPlease enter number 1  ");
+            int x = int.Parse(Console.ReadLine());
 
+            Console.Write("\n\nPlease enter number 2  ");
+            int y = int.Parse(Console.ReadLine());
+
+            int z = x + y;
+            Console.WriteLine("\n\nThe sum of {0} and {1} is {2}", x, y, z);
+
+
+            //Data type, Float type, byte,
+            decimal x = 0.5555555555555555m;
+            byte byteValue1 = 201;
+            float flt = 3.5F;
+            Console.WriteLine("My amount = {0:C}", x);
+            Console.WriteLine(byteValue1);
+            Console.WriteLine(flt);
+            //Nullable type
+            Nullable<int> i = null;
+            Console.WriteLine(i.GetValueOrDefault());
+
+
+            //Conversion type
+            string strgNumber = "33TG";
+            int Output = 0;
+            bool IsConversionSuccessful = int.TryParse(strgNumber, out Output);
+            if (IsConversionSuccessful)
+            {
+                Console.WriteLine(Output);
+            }
+            else
+            {
+                Console.WriteLine("Please enter a valid number");
+            }
+
+
+            //char type
+            char[] chars = new char[4];
+
+            chars[0] = 'X';
+            chars[1] = '\x0058';
+            chars[2] = (char)88;
+            chars[3] = '\u0058';
+
+            foreach (char c in chars)
+            {
+                Console.Write(c + " ");
+            }
             Console.WriteLine("\n\nPress any key to exit.");
             Console.ReadKey();
 
