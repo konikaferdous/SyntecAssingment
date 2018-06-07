@@ -7,10 +7,36 @@ using System.Threading.Tasks;
 
 namespace AssignmentProject
 {
+
     class Program
     {
         public static object Success { get; private set; }
-
+        public class Person
+        {
+            public string Name { get; set; }
+            public int Age { get; set; }
+            public Person(string name, int age)
+            {
+                Name = name;
+                Age = age;
+            }
+        }
+        public class Animal
+        {
+            public Animal()
+            {
+                Dog = "unknown";
+            }
+            public Animal(string dog)
+            {
+                Dog = dog;
+            }
+            public string Dog { get; }
+            public override string ToString()
+            {
+                return Dog.ToString();
+            }
+        }
 
         static void Main(string[] args)
         {
@@ -198,9 +224,10 @@ namespace AssignmentProject
             }
             */
             //For loop
+            /*
             int m;
             int n = 10;
-            for (m = 0, Console.WriteLine("Start: {0}", m); m < n; m++, n--, Console.WriteLine("m={0}, j={1}", m, n))
+            for(m=0, Console.WriteLine("Start: {0}", m); m<n; m++, n--, Console.WriteLine("m={0}, j={1}", m, n))
             {
                 //Body of this For loop
             }
@@ -211,7 +238,7 @@ namespace AssignmentProject
                 Console.WriteLine(z);
                 z++;
             } while (z < 5);
-
+            
             //While Loop
             int number = 0;
 
@@ -222,20 +249,20 @@ namespace AssignmentProject
             }
 
             Console.ReadLine();
-
+            
             //Array
             int[] array = new int[10];
             int p, r;
-            for (p = 0; p < 10; p++)
+            for(p=0; p<10; p++)
             {
                 array[p] = p + 100;
             }
-            for (r = 0; r < 10; r++)
+            for(r=0; r<10; r++)
             {
                 Console.WriteLine("Element[{0}] = {1}", r, array[r]);
             }
             Console.ReadKey();
-
+            
             //Switch case
             char grade = 'B';
 
@@ -259,7 +286,127 @@ namespace AssignmentProject
                     break;
             }
             Console.WriteLine("Your grade is  {0}", grade);
+            Console.ReadLine(); 
+            
+            //Forech loop
+            var fibNumbers = new List<int> { 0, 1, 1, 2, 3, 5, 8, 13 };
+            int count = 0;
+            foreach (int element in fibNumbers)
+            {
+                count++;
+                Console.WriteLine($"Element #{count}: {element}");
+            }
+            Console.WriteLine($"Number of elements: {count}   \n\n");
+
+
+            char[] gender = { 'm', 'f', 'm', 'm', 'm', 'f', 'f', 'm', 'm', 'f' };
+            int male = 0, female = 0;
+            foreach (char g in gender)
+            {
+                if (g == 'm')
+                    male++;
+                else if (g == 'f')
+                    female++;
+            }
+            Console.WriteLine("Number of male = {0}", male);
+            Console.WriteLine("Number of female = {0}", female);
+            
+
+            //Arithmatic Operation
+            int g = 21;
+            int h = 10;
+            int j;
+                    j = g + h;
+            Console.WriteLine("1 - Value of j is {0}", j);
+            j = g - h;
+            Console.WriteLine("2 - Value of j is {0}", j);
+            j = g * h;
+            Console.WriteLine("3 - Value of j is {0}", j);
+            j = g / h;
+            Console.WriteLine("4 - Value of j is {0}", j);
+            j = g % h;
+            Console.WriteLine("5 - Value of j is {0}", j);
+            j = g++;
+            Console.WriteLine("6 - Value of j is {0}", j);
+            j = g--;
+            Console.WriteLine("7 - Value of j is {0}", j);
             Console.ReadLine();
+            
+
+            //Relational operator
+            int ro1 = 21;
+            int ro2 = 10;
+            if(ro1 == ro2)
+            {
+                Console.WriteLine("ro1 is equal to ro2");
+            }else
+            { Console.WriteLine("ro1 isnot equal to ro2"); }
+                if (ro1 < ro2)
+            {
+                Console.WriteLine("ro1 is less than than  ro2");
+            }else
+            { Console.WriteLine("ro1 is not less than than  ro2"); }
+                if (ro1 > ro2)
+            {
+                Console.WriteLine("ro1 is greater than ro2");
+            }
+            else { Console.WriteLine("ro1 is greater than ro2"); }
+            ro1 = 5;
+            ro2 = 20;
+            if(ro1 <= ro2)
+            {
+                Console.WriteLine("ro1 is either than less than or equal to ro2");
+            }
+            if (ro1 >= ro2)
+            {
+                Console.WriteLine("ro2 is either than less than or equal to ro1");
+            }
+            */
+            //Logical operator
+            bool lo1 = true;
+            bool lo2 = true;
+
+            if(lo1 && lo2)
+            {
+                Console.WriteLine("This Condition is true");
+            }
+            if (lo1 || lo2)
+            {
+                Console.WriteLine("This Condition is true");
+            }
+            lo1 = false;
+            lo2 = true;
+            if (lo1 && lo2)
+            {
+                Console.WriteLine(" This Condition is true");
+            }
+            if (!(lo1 && lo2))
+            {
+                Console.WriteLine("Condition is true");
+            }
+            Console.ReadLine();
+            //Objects & class
+            Person person1 = new Person("Nashima", 6);
+            Console.WriteLine("Person1 Name= {0} Age = {1}", person1.Name, person1.Age);
+
+            Person person2 = person1; // Person are Objects
+            person2.Name = "shefa";  //person2 is instance
+            person2.Age = 20;
+
+            Console.WriteLine("Person2 Name = {0} Age = {1}", person2.Name, person2.Age);
+            Console.WriteLine("Person1 Name = {0} Age = {1}", person1.Name, person1.Age);
+
+
+            //class
+            var animal1 = new Animal();
+            Console.WriteLine(animal1.Dog);
+            var animal2 = new Animal("diyego");
+            Console.WriteLine(animal2.Dog);
+            Console.WriteLine(animal2.ToString());
+
+
+
+
 
             Console.WriteLine("\n\nPress any key to exit.");
             Console.ReadKey();
