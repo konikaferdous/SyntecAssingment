@@ -7,10 +7,59 @@ using System.Threading.Tasks;
 
 namespace AssignmentProject
 {
-
-    class Program
+    /*
+     //polymorphism 
+     
+    abstract class Shape
     {
-        public static object Success { get; private set; }
+        public abstract int area();
+    }
+    class Rectngle: Shape
+    {
+        private int length;
+        private int width;
+        public Rectngle(int a = 0, int b= 0)
+        {
+            length = a;
+            width = b;
+        }
+        public override int area()
+        {
+            Console.WriteLine("Rectangle class area :");
+            return (width * length);
+        }
+
+    }
+    
+    
+    //Inheritence
+        class Shape
+    {
+        public void setWidth(int w)
+        {
+           width = w;
+        }
+        public void setHeight(int h)
+        {
+            height = h;
+        }
+        protected int width;
+        protected int height;
+    }    
+
+    class Rectangular: Shape
+    {
+        public int getArea()
+        {
+            return (width * height);
+        }
+    }
+    */
+
+    
+        /*
+         
+        //class
         public class Person
         {
             public string Name { get; set; }
@@ -36,8 +85,13 @@ namespace AssignmentProject
             {
                 return Dog.ToString();
             }
-        }
+        } 
+        */
 
+        class Program
+        {
+        public static object Success { get; private set; }
+        
         static void Main(string[] args)
         {
             /*
@@ -223,6 +277,7 @@ namespace AssignmentProject
                 Console.WriteLine("Hey! I am Trapped");
             }
             */
+
             //For loop
             /*
             int m;
@@ -361,7 +416,7 @@ namespace AssignmentProject
             {
                 Console.WriteLine("ro2 is either than less than or equal to ro1");
             }
-            */
+            
             //Logical operator
             bool lo1 = true;
             bool lo2 = true;
@@ -385,6 +440,8 @@ namespace AssignmentProject
                 Console.WriteLine("Condition is true");
             }
             Console.ReadLine();
+
+    
             //Objects & class
             Person person1 = new Person("Nashima", 6);
             Console.WriteLine("Person1 Name= {0} Age = {1}", person1.Name, person1.Age);
@@ -403,10 +460,21 @@ namespace AssignmentProject
             var animal2 = new Animal("diyego");
             Console.WriteLine(animal2.Dog);
             Console.WriteLine(animal2.ToString());
+            
 
+            
+            // inheritence
+            Rectangular Rect = new Rectangular();
+            Rect.setWidth(5);
+            Rect.setHeight(7);
+            Console.WriteLine("Total area: {0}", Rect.getArea());
+            
 
-
-
+            //polymorphism
+            Rectngle r = new Rectngle(10, 7);
+            double a = r.area();
+            Console.WriteLine("Area of Ractangle: {0}", a);
+            */
 
             Console.WriteLine("\n\nPress any key to exit.");
             Console.ReadKey();
